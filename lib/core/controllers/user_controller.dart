@@ -1,5 +1,4 @@
-import 'package:ecommerce_app/models/user.dart';
-import 'package:ecommerce_app/pages/consumer/catalogo.dart';
+import 'package:ecommerce_app/core/models/user.dart';
 import 'package:get/get.dart';
 
 class UserController extends GetxController {

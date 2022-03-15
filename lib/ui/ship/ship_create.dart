@@ -1,23 +1,35 @@
-import 'package:ecommerce_app/controllers/user_controller.dart';
+import 'package:ecommerce_app/core/models/ships.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 
-class RegisterConsumer extends StatelessWidget {
-  RegisterConsumer({Key? key}) : super(key: key);
+import '../../core/controllers/ship_controller.dart';
+
+class ShipCreate extends StatelessWidget{
+  const ShipCreate({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<UserController>(
-        init: UserController(),
-        builder: (_) => Scaffold(
-              appBar: AppBar(
-                leading: IconButton(
-                  icon: Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Get.toNamed("/login");
-                  },
+    
+    return GetBuilder<ShipController>(
+      init: ShipController(),
+      builder: (_) =>Scaffold(
+        appBar: AppBar(
+                actions: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                    IconButton(
+                    icon: Icon(Icons.arrow_back),
+                    onPressed: () {
+                      Get.toNamed("/login");
+                    },
                 ),
+                    ],
+                  )
+                ]
               ),
               body: Center(
                 child: Column(
@@ -25,7 +37,7 @@ class RegisterConsumer extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: const InputDecoration(
-                            labelText: "Nombres y apellidos",
+                            labelText: "Imagen",
                             border: OutlineInputBorder(),
                             icon: const Padding(
                               padding: const EdgeInsets.only(top: 15.0),
@@ -34,7 +46,7 @@ class RegisterConsumer extends StatelessWidget {
                       ),
                       TextFormField(
                         decoration: const InputDecoration(
-                            labelText: "Correo electronico",
+                            labelText: "name",
                             border: OutlineInputBorder(),
                             icon: const Padding(
                               padding: const EdgeInsets.only(top: 15.0),
@@ -43,7 +55,7 @@ class RegisterConsumer extends StatelessWidget {
                       ),
                       TextFormField(
                         decoration: const InputDecoration(
-                            labelText: "Teléfono",
+                            labelText: "url",
                             border: OutlineInputBorder(),
                             icon: const Padding(
                               padding: const EdgeInsets.only(top: 15.0),
@@ -52,7 +64,7 @@ class RegisterConsumer extends StatelessWidget {
                       ),
                       TextFormField(
                         decoration: const InputDecoration(
-                            labelText: 'Contraseña',
+                            labelText: 'year',
                             border: OutlineInputBorder(),
                             icon: const Padding(
                               padding: const EdgeInsets.only(top: 15.0),
@@ -77,6 +89,8 @@ class RegisterConsumer extends StatelessWidget {
                           }),
                     ]),
               ),
-            ));
+      ),
+    );
   }
+
 }

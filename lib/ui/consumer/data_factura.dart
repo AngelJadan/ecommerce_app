@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/controllers/user_controller.dart';
+import 'package:ecommerce_app/core/controllers/user_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

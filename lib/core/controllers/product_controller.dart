@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/models/producto.dart';
+import 'package:ecommerce_app/core/models/producto.dart';
 import 'package:get/get.dart';
 
 class ProductController extends GetxController{
@@ -13,5 +13,8 @@ class ProductController extends GetxController{
     print("Inizialing controles product");
   }
   
-  
+  @override
+  void onReady(){
+    super.onReady();
+  }
 }

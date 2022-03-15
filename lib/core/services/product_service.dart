@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:graphql_flutter/graphql_flutter.dart';
+//import 'package:graphql_flutter/graphql_flutter.dart';
 
 /*final String url = "https://dev.ups.edu.ec/hasura/v1/graphql";
 final response = await http.get(url, headers:{
@@ -7,6 +7,7 @@ final response = await http.get(url, headers:{
   "x-hasura-admin-secret":"scafp",
 });*/
 
+/*
 ValueNotifier<GraphQLClient> client = ValueNotifier(
   GraphQLClient(
     cache: InMemoryCache(),
@@ -15,7 +16,7 @@ ValueNotifier<GraphQLClient> client = ValueNotifier(
       "x-hasura-admin-secret": "scafp",
     }
     )));
-
+*/
 
 final String getAllProductQuery = """
 query MyQuery {
